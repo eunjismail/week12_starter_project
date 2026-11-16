@@ -5,7 +5,7 @@ Node.js 20.19+ 또는 22.12+ 권장. 프로젝트 폴더에서 실행:
 
 ```bash
 npm install
-npm run dev
+npm run dev   
 ```
 
 브라우저에 터미널의 Local URL을 열고 LAB 탭을 이동하세요. 제출 전 `npm run build`도 실행하세요.
