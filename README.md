@@ -1,6 +1,18 @@
 # OSS Week 12 — React Hooks Playground (Student Starter)
 
-## 실행 방법ㅇㅇ
+# Project Structure: App.jsx와 주요 Lab 컴포넌트의 역할
+우선 프로젝트는 index.html → main.jsx → App.jsx → Lab 컴포넌트들의 순서로 연결된다. index.html은 React 앱이 실행되는 기본 HTML 파일이고, main.jsx는 App.jsx를 불러와 화면에 렌더링하는 역할을 한다. App.jsx에서는 useState를 이용해 현재 선택된 Lab을 관리하며, 버튼을 누르면 해당 Lab이 화면에 나타나는 것이다. Lab은 총 4개로 구성되어 있다. Lab 1은 useEffect를 이용한 타이머, Lab 2는 타이머의 시작과 정지 등을 하고, Lab 3은 useRef를 사용했고 입력창 관련된 것을 담당한다. 마지막으로 Lab 4는 useRef를 이용해서 타이머를 관리한다.
+
+# useEffect: Effect, Dependency Array 및 Cleanup의 동작 원리
+
+
+
+
+
+
+
+
+## 실행 방법
 Node.js 20.19+ 또는 22.12+ 권장. 프로젝트 폴더에서 실행:
 
 ```bash
