@@ -35,7 +35,7 @@ useState는 값이 바뀌면 컴포넌트가 다시 렌더링되어 화면에도
 - 변경전 : x
 - 변경후 : background-color: khaki;
 - 변경전 : background : white;
-- 변경후 : background : green;
+- 변경후 : background : #aab7ca;
 3. 4개 Lab 정상 동작 확인
 확인!
 4. Browser Console 오류 확인
