@@ -6,7 +6,8 @@
 # useEffect: Effect, Dependency Array 및 Cleanup의 동작 원리
 useEffect는 컴포넌트가 렌더링된 후 특정 작업을 실행할 때 사용하는 Hook이다. 이번 과제에서는 타이머를 실행하는 데 사용한다. Effect는 useEffect 안에 작성된 작업을 실행하는 것이고, Dependency Array는 Effect가 언제 다시 실행될지를 결정한다. 빈 배열 []을 넣으면 처음 마운트될 때 실행되기도 하고 running 값이 변경될 때마다 다시 실행하기도 한다. 배열을 생략하면 렌더링될 때마다 실행된다. Cleanup은 이전에 실행된 작업을 정리하는 역할을 하는데 이번 과제에서는 clearInterval을 통해 타이머가 계속 실행되지 않도록 한다.
 
-
+# useRef: .current 속성과 useState의 차이
+useRef는 값을 저장하거나 HTML 요소에 직접 접근할 때 사용하는 Hook이다. .current 속성을 통해 저장된 값에 접근하거나 변경할 수 있다. useState와의 가장 큰 차이점은 값이 변경되었을 때 렌더링이 발생하는지 여부이다. useState는 값이 변경되면 컴포넌트가 다시 렌더링되지만, useRef는 .current 값이 변경되어도 다시 렌더링되지 않는다.
 
 
 
