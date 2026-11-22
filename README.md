@@ -9,7 +9,11 @@ useEffect는 컴포넌트가 렌더링된 후 특정 작업을 실행할 때 사
 # useRef: .current 속성과 useState의 차이
 useRef는 값을 저장하거나 HTML 요소에 직접 접근할 때 사용하는 Hook이다. .current 속성을 통해 저장된 값에 접근하거나 변경할 수 있다. useState와의 가장 큰 차이점은 값이 변경되었을 때 렌더링이 발생하는지 여부이다. useState는 값이 변경되면 컴포넌트가 다시 렌더링되지만, useRef는 .current 값이 변경되어도 다시 렌더링되지 않는다.
 
-
+# Code Analysis: useEffect와 useRef 관련 주요 코드 각 1개(5~15줄)를 선택하여 동작 원리 설명
+- useEffect
+Lab1에서는 useEffect를 이용해 1초마다 count가 증가하도록 한다. 먼저 setInterval을 통해 타이머를 생성하고, 생성된 타이머 ID를 timerId에 저장한다. 이후 setCount(prev => prev + 1)을 이용해 1초마다 count를 1씩 증가시키는 것이다. Dependency Array가 빈 배열이기 때문에 처음에 마운트될 때는 Effect가 실행되고, Cleanup에서는 clearInterval을 이용해 타이머가 정리된다. 이를 통해 useEffect가 실행되는 시점과 Cleanup의 역할을 확인할 수 있다.
+- useRef
+Lab4에서는 useRef를 이용해 타이머 ID를 저장하고 관리한다. 먼저 useRef(null)을 통해 timerRef를 생성한다. Start 버튼을 누르면 setInterval을 통해 타이머가 실행되고, 생성된 ID는 timerRef.current에 저장된다. 이때 이미 타이머가 실행 중이라면 중복 실행되지 않도록 한다. Stop 버튼을 누르면 clearInterval을 통해 타이머를 정지하고, timerRef.current를 null로 변경한다. 여기서 useRef는 값이 변경되어도 렌더링되지 않지만, useState로 관리하는 running은 값이 변경되면 화면에 반영된다. 이를 통해 useRef와 useState의 차이를 확인할 수 있다.
 
 
 
