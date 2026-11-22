@@ -15,6 +15,22 @@ Lab1에서는 useEffect를 이용해 1초마다 count가 증가하도록 한다.
 - useRef
 Lab4에서는 useRef를 이용해 타이머 ID를 저장하고 관리한다. 먼저 useRef(null)을 통해 timerRef를 생성한다. Start 버튼을 누르면 setInterval을 통해 타이머가 실행되고, 생성된 ID는 timerRef.current에 저장된다. 이때 이미 타이머가 실행 중이라면 중복 실행되지 않도록 한다. Stop 버튼을 누르면 clearInterval을 통해 타이머를 정지하고, timerRef.current를 null로 변경한다. 여기서 useRef는 값이 변경되어도 렌더링되지 않지만, useState로 관리하는 running은 값이 변경되면 화면에 반영된다. 이를 통해 useRef와 useState의 차이를 확인할 수 있다.
 
+### Lab 비교 분석
+# useEffect의 Dependency Array가 필요한 이유는?
+Dependency Array는 useEffect가 언제 다시 실행될지 정하기 위해 필요하다. 빈 배열 []을 사용하면 처음 마운트할 때 Effect가 실행되고, running도하면 running 값이 변경될 때마다 다시 실행되는 것이다. 근데 이때 Dependency Array를 빼게 되면 렌더링될 때마다 Effect가 실행되게 된다. 즉, 원하는 시점에만 실행되도록 할 수 있는 것이다.
+# Cleanup을 사용하지 않으면 어떤 문제가 발생할 수 있는가?
+Cleanup을 사용하지 않으면 전에 실행했던 작업이 남아있어 문제가 될 수 있다. 
+예를 들면 Lab1에서 clearInterval을 사용하지 않으면 컴포넌트가 사라진 이후에도 타이머가 계속 진행 될 수 있다. 
+그리고 또 Effect가 다시 실행될 때 기존 타이머가 남아있으면 여러 타이머가 중복으로 실행되는 문제가 생길 수 있다.
+# useState와 useRef의 가장 중요한 차이는?
+useState는 값이 바뀌면 컴포넌트가 다시 렌더링되어 화면에도 반영된다. 하지만 useRef는 .current에 저장된 값이 바뀌어도 랜더링되지 않는다. 그래서 화면에 표시해야 하는 것은 useState를, 화면을 다시 렌더링할 필요가 없는 것은 useRef를 사용하는 것이다.
+# LAB 2와 LAB 4의 Timer 관리 방식은 어떻게 다른가?
+모두 타이머를 시작, 멈춤, 초기화 할 수 있지만 타이머를 관리하는 부분에서 차이가 있다. Lab2에서는 running이 true로 바뀌면 Effect에서 타이머를 실행하고, false로 바뀌면 Cleanup을 통해 타이머를 정리하는 방식이다. Lab4는 Start 버튼을 누르면 타이머를 생성하고, Stop 버튼을 누르면 저장된 ID를 이용해서 타이머를 멈춘다. 즉, Lab2는 useEffect와 State의 변화에 따라 타이머를 바뀌게 하고, Lab4는 useRef를 이용해 타이머를 관리한다.
+
+
+
+
+
 
 
 
