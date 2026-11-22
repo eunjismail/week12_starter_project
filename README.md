@@ -4,6 +4,8 @@
 우선 프로젝트는 index.html → main.jsx → App.jsx → Lab 컴포넌트들의 순서로 연결된다. index.html은 React 앱이 실행되는 기본 HTML 파일이고, main.jsx는 App.jsx를 불러와 화면에 렌더링하는 역할을 한다. App.jsx에서는 useState를 이용해 현재 선택된 Lab을 관리하며, 버튼을 누르면 해당 Lab이 화면에 나타나는 것이다. Lab은 총 4개로 구성되어 있다. Lab 1은 useEffect를 이용한 타이머, Lab 2는 타이머의 시작과 정지 등을 하고, Lab 3은 useRef를 사용했고 입력창 관련된 것을 담당한다. 마지막으로 Lab 4는 useRef를 이용해서 타이머를 관리한다.
 
 # useEffect: Effect, Dependency Array 및 Cleanup의 동작 원리
+useEffect는 컴포넌트가 렌더링된 후 특정 작업을 실행할 때 사용하는 Hook이다. 이번 과제에서는 타이머를 실행하는 데 사용한다. Effect는 useEffect 안에 작성된 작업을 실행하는 것이고, Dependency Array는 Effect가 언제 다시 실행될지를 결정한다. 빈 배열 []을 넣으면 처음 마운트될 때 실행되기도 하고 running 값이 변경될 때마다 다시 실행하기도 한다. 배열을 생략하면 렌더링될 때마다 실행된다. Cleanup은 이전에 실행된 작업을 정리하는 역할을 하는데 이번 과제에서는 clearInterval을 통해 타이머가 계속 실행되지 않도록 한다.
+
 
 
 
