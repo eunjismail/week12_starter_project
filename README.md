@@ -78,20 +78,14 @@ useEffect를 이용해 타이머를 실행하고 관리하는 방법을 알게 �
 많은 부분에서 활용하였다. 가장 먼저 useEffect와 useRef의 차이를 이해하는 부분에서 도움을 받았다. 특히 Dependency Array와 Cleanup의 차이에 대한 개념을 머리 속에 정리 할 수 있었다. 또한 Input 값 검증 기능을 추가하는 부분에서도 AI를 활용하였다. 전체적적으로 처음할 때는 코드가 어렵게 다가왔지만, AI의 설명을 참고하고 코드를 수정하면서 이해할 수 있었다. AI에게 고마움을 느꼈다.
 
 
-
-
-
-
-## 수행 방법
-1. `src/components/` 아래의 LAB 1~4 파일에 있는 `TODO`를 직접 완성합니다.
-2. `src/App.jsx`, `src/App.css`는 공통 화면이므로 가급적 수정하지 않습니다.
-3. 각 LAB의 동작 화면과 콘솔 결과를 기록합니다.
-4. 한 LAB에서 다른 LAB으로 탭을 전환하면 기존 컴포넌트가 언마운트됩니다. Cleanup 결과를 관찰합니다.
-
-
 ## 이해도 확인 질문
 1. `setCount(prev => prev + 1)`은 왜 유용한가?
+이전 값을 기준으로 증가되기 때문에 최신 값을 문제없이 사용할 수 있다.
 2. `useEffect(fn, [])`과 `useEffect(fn)`은 어떻게 다른가?
+[]가 있으면 처음 렌더링될 때 실행되고, 없으면 렌더링될 때마다 실행된다.
 3. Cleanup은 언제 실행되는가? 개발 환경 StrictMode 영향은?
+컴포넌트가 사라지거나 Effect가 다시 실행되기 전에 Cleanup이 실행된다. StrictMode에서는 처음에 Effect와 Cleanup을 추가로 실행해 오류를 확인한다고 한다.
 4. `useState`와 `useRef`의 값 변경 시 렌더링 차이는?
+useState는 값이 변경되면 다시 렌더링되지만, useRef는 값이 변경되더라도 다시 렌더링되지 않는다.
 5. LAB 2와 LAB 4에서 Timer를 관리하는 방식의 차이는?
+Lab2는 uesEffect를 이용해 Timer를 관리하고, Lab4는 useRef를 이용해서 관리한다.
