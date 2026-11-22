@@ -69,6 +69,9 @@ useState는 값이 바뀌면 컴포넌트가 다시 렌더링되어 화면에도
 ### 선택 기능 (추가 평가) : Input 값 검증 기능
 Lab3에 Input 값 검증 기능을 만들었다. if문을 이용해서 입력창이 비어 있다면 alert로 이름을 입력하라는 창이 나타나게 했고, 값이 입력되어 있다면 원래처럼 입력 내용이 삭제되도록 했다.
 
+# Deployment: 실제 접근 가능한 Vercel URL
+https://week12-starter-project-theta.vercel.app/
+
 # Weekly Review:
 ### 새롭게 배운 내용 3가지
 useEffect를 이용해 타이머를 실행하고 관리하는 방법을 알게 되었다. 이전에는 useState를 이용해 값이 변경되면 화면이 다시 렌더링된다는 것만 알고 있었는데, useEffect를 사용하면 특별한 작업을 자동으로 실행할 수 있다는 것을 알게 되었다. 또한 Dependency Array에 대해 알게되었다. 강의 때 들었던, Dependency Array에 어떤 값을 넣느냐에 따라 Effect가 실행되는 시점이 달라진다는 것을 코드짜며 더 잘 이해하게 되었다. 마지막으로 Cleanup을 사용하지 않으면 타이머가 중복 실행될 수 있다는 것도 더 잘 이해하게 되었다.
