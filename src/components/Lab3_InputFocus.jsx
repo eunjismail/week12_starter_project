@@ -9,6 +9,11 @@ export default function Lab3InputFocus() {
   };
 
   const clearInput = () => {
+    if (inputRef.current.value === '') {
+      alert('이름을 입력해주세요!!!!');
+      return;
+    }
+
     inputRef.current.value = '';
     inputRef.current.focus();
   };
