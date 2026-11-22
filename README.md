@@ -1,6 +1,6 @@
 # OSS Week 12 — React Hooks Playground (Student Starter)
 
-## 실행 방법
+## 실행 방법ㅇㅇ
 Node.js 20.19+ 또는 22.12+ 권장. 프로젝트 폴더에서 실행:
 
 ```bash
