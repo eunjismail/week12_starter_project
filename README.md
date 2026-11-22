@@ -32,8 +32,10 @@ useState는 값이 바뀌면 컴포넌트가 다시 렌더링되어 화면에도
 - 변경전 : React Hooks Playground
 - 변경후 : 오소스 12주차 과제
 2. CSS 스타일 2곳 이상 변경
-- 변경전 :
-- 변경후 : 
+- 변경전 : x
+- 변경후 : background-color: khaki;
+- 변경전 : background : white;
+- 변경후 : background : green;
 3. 4개 Lab 정상 동작 확인
 확인!
 4. Browser Console 오류 확인
