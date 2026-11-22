@@ -27,6 +27,19 @@ useState는 값이 바뀌면 컴포넌트가 다시 렌더링되어 화면에도
 ### LAB 2와 LAB 4의 Timer 관리 방식은 어떻게 다른가?
 모두 타이머를 시작, 멈춤, 초기화 할 수 있지만 타이머를 관리하는 부분에서 차이가 있다. Lab2에서는 running이 true로 바뀌면 Effect에서 타이머를 실행하고, false로 바뀌면 Cleanup을 통해 타이머를 정리하는 방식이다. Lab4는 Start 버튼을 누르면 타이머를 생성하고, Stop 버튼을 누르면 저장된 ID를 이용해서 타이머를 멈춘다. 즉, Lab2는 useEffect와 State의 변화에 따라 타이머를 바뀌게 하고, Lab4는 useRef를 이용해 타이머를 관리한다.
 
+# Customizing
+1. 제목변경
+- 변경전 : React Hooks Playground
+- 변경후 : 오소스 12주차 과제
+2. CSS 스타일 2곳 이상 변경
+- 변경전 :
+- 변경후 : 
+3. 4개 Lab 정상 동작 확인
+확인!
+4. Browser Console 오류 확인
+확인!
+
+
 
 
 
